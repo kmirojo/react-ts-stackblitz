@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 class Hello extends Component {
   render() {
     return (
-      <h1>HELLOOO!!! {this.props.name}</h1>
+      <h1>HELLOOO {this.props.name}!!!</h1>
     )
   }
 }

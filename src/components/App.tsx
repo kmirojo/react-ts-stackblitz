@@ -1,28 +1,31 @@
 import React, {Component} from 'react';
 import Hello from './Hello';
 
-interface AppProps { }
-interface AppState {
-  name: string;
-}
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
+class App extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props)
     this.state = {
-      name: 'Juan'
+      tasks: []
     };
   }
-
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
+        <nav className="navbar navbar-light bg-light">
+          <a className="navbar-brand" href="/">
+            {this.props.title}
+          </a>
+        </nav>
       </div>
-    );
+    )
   }
+}
+
+interface IProps {
+  title: string;
+}
+interface IState {
+  tasks: []
 }
 
 export default App;

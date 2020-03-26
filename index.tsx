@@ -5,4 +5,4 @@ import Hello from './src/components/Hello';
 import App from './src/components/App';
 import './style.css';
 
-render(<App />, document.getElementById('root'));
+render(<App title="Juan" />, document.getElementById('root'));
